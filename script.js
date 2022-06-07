@@ -23,3 +23,33 @@ function validatedStyleElement(element, errorMessage) {
     errorMessage.style.display = 'none'
 
 }
+
+function login(event) {
+    event.preventDefault()
+
+    if(!validateEmail(inputEmail.value) && !validatePassword(inputPassword.value)) {
+        invalidatedStyleElement(inputEmail, errorEmail)
+        invalidatedStyleElement(inputPassword, errorPassword)
+        return;
+    }
+    if(validateEmail(inputEmail.value) && !validatePassword(inputPassword.value)) {
+        validatedStyleElement(inputEmail, errorEmail)
+        invalidatedStyleElement(inputPassword, errorPassword)
+        return;
+    }
+    if(!validateEmail(inputEmail.value) && validatePassword(inputPassword.value)) {
+        invalidatedStyleElement(inputEmail, errorEmail)
+        validatedStyleElement(inputPassword, errorPassword)
+        return;
+    }
+
+
+    validatedStyleElement(inputEmail, errorEmail)
+    validatedStyleElement(inputPassword, errorPassword)
+
+    
+}
+
+buttonLogin.addEventListener('click', login);
+  
+
