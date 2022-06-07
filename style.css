@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F2F5;
+    padding: 20px;
+}
+
+
+h1 {
+    color: #166FE5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p {
+    display: none;
+}
+
+
+#input-email {
+    width: 100%;    
+    background-color: #E8F0FE;
+    margin-bottom: 10px;
+    height: 40px;
+    border: 1px solid #DDDFE2;
+    border-radius: 5px;
+    padding-left: 10px;    
+}
+
+.error-email, .error-password {
+    font-size: 12px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    color: red;
+    display: none;
+
+}
+
+#input-email:focus {
+    outline: none;
+    border-color: #166FE5;
+}
+
+#input-password {
+    width: 100%;    
+    margin-bottom: 10px;
+    height: 40px;
+    border: 1px solid #DDDFE2;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#input-password:focus {
+    outline: none;
+    border-color: #166FE5;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btn-login { 
+    width: 100%;    
+    background-color: #1877f2;
+    height: 40px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+}
+
+#btn-new-count {
+    width: 130px;
+    background-color: #42B72A;
+    height: 35px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#btn-new-count:hover {
+    background-color: #36A420;
+}
+
+a {
+    color: #166FE5;
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+.line {
+    border-top: 1px solid #DDDFE2;;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+@media screen and (min-width: 460px) {
+    .container-form {
+        background-color: white;
+        margin: auto;
+        width: 400px;
+        border: 1px solid #DDDFE2;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 0px 1px rgba(240,231,240,0.66);
+                
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section {        
+        width:40%;
+        min-width: 400px;
+    }
+
+    h1 {
+        font-size: 70px;
+        text-align: left;
+    }
+
+    p {
+        display: block;
+        font-size: 30px;
+    }
+}
